@@ -1,6 +1,6 @@
 # Lee Polla
 
-![Rock Lee](images/rocklee.jpg)
+![Rock Lee](./rocklee.jpg)
 
 I'm looking forward to learning from all of you and having a fun time in class!
 
