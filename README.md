@@ -1,3 +1,3 @@
 # Lee Polla
 
-! [Rock Lee](./rock lee.jpg)
+! [Rock Lee](rock lee.jpg)
