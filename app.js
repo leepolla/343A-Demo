@@ -12,6 +12,7 @@ datePicker.addEventListener('input', function (e) {
     var date = datePicker.value;
 
     console.log(date);
+	console.log('lmao');
 
     // Request the users current position from the geolocation API
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -20,6 +21,7 @@ datePicker.addEventListener('input', function (e) {
         // containing the location information.
         var latitude = position.coords.latitude;
         var longitude = position.coords.longitude;
+		console.log('lmao');
 
         // Construct the URL that will work with the sunrise-sunset.org API,
         // API Documentation: https://sunrise-sunset.org/api
@@ -39,6 +41,7 @@ datePicker.addEventListener('input', function (e) {
             // in the users timezone (original timestamp is in UTC)
             console.log(sunriseDate.getHours());
             console.log(sunriseDate.getMinutes());
+			console.log('lmao');
         });
     });
 
@@ -62,12 +65,14 @@ function makeApiRequest(url, callback) {
                 // the AJAX request was made against
                 var responseText = httpRequest.responseText;
                 console.log(responseText);
+				console.log('lmao');
 
                 // To be able to use it like a JavaScript object,
                 // pass it to JSON.parse, which will return a JavaScript object
                 var responseJson = JSON.parse(responseText);
 
                 console.log(responseJson);
+				console.log('lmao');
 
                 // Call the callback fuction,
                 // passing in the parsed JavaScript object
