@@ -1,5 +1,5 @@
 @keyframes demo {
-	0% {background-color:red; left:50%; top: 10%;}
+	0% {background-color:red; left:50%; right: 10%;}
 	17% {background-color:orange; left: 75%; top:35%}
 	33% {background-color:yellow; left: 75%; top:60%}
 	50% {background-color:green; left: 50%; top:85%}
