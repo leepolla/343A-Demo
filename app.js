@@ -11,7 +11,10 @@ button.addEventListener('click', function (e) {
 
     //var date = datePicker.value;
 
+
     console.log('event');
+    console.log(date);
+	console.log('lmao');
 
     // Request the users current position from the geolocation API
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -20,6 +23,7 @@ button.addEventListener('click', function (e) {
         // containing the location information.
         var latitude = position.coords.latitude;
         var longitude = position.coords.longitude;
+		console.log('lmao');
 
         // Construct the URL that will work with the sunrise-sunset.org API,
         // API Documentation: https://sunrise-sunset.org/api
@@ -40,6 +44,7 @@ button.addEventListener('click', function (e) {
             // in the users timezone (original timestamp is in UTC)
             console.log(sunriseDate.getHours());
             console.log(sunriseDate.getMinutes());
+			console.log('lmao');
         });
     });
 
@@ -63,6 +68,7 @@ function makeApiRequest(url, callback) {
                 // the AJAX request was made against
                 var responseText = httpRequest.responseText;
                 console.log(responseText);
+				console.log('lmao');
 
                 // To be able to use it like a JavaScript object,
                 // pass it to JSON.parse, which will return a JavaScript object
@@ -75,8 +81,8 @@ function makeApiRequest(url, callback) {
 				box.style.height = "500px";
 				box.style.width = "500px";
 				box.style.backgroundImage = "url(rocklee.jpg)";
-				
-				
+				console.log('lmao');
+
 
                 // Call the callback fuction,
                 // passing in the parsed JavaScript object
