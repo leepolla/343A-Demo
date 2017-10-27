@@ -1,17 +1,17 @@
 var button = document.getElementById('button');
-var datePicker = document.getElementById('date-picker');
+//var datePicker = document.getElementById('date-picker');
 
-datePicker.max = getTodayDate();
-datePicker.value = getTodayDate();
+//datePicker.max = getTodayDate();
+//datePicker.value = getTodayDate();
 
 // Event listener for the button's click even
 // button.addEventListener('click', function (e) {
-datePicker.addEventListener('input', function (e) {
+button.addEventListener('click', function (e) {
     console.log('requesting location...');
 
-    var date = datePicker.value;
+    //var date = datePicker.value;
 
-    console.log(date);
+    console.log('event');
 
     // Request the users current position from the geolocation API
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -23,13 +23,14 @@ datePicker.addEventListener('input', function (e) {
 
         // Construct the URL that will work with the sunrise-sunset.org API,
         // API Documentation: https://sunrise-sunset.org/api
-        var url = 'https://api.sunrise-sunset.org/json?lat=' + latitude + '&lng=' + longitude + '&formatted=0&date=' + date;
+        var url = 'https://api.sunrise-sunset.org/json?lat=' + latitude + '&lng=' + longitude + '&formatted=0&date=' + "2017-10-20";
 
         // Call our function defined below to make the AJAX request,
         // passing in a callback function that will be called when the API request
         // has been completed successfully.
         makeApiRequest(url, function (response) {
-            console.log(response.results.sunrise);
+            console.log(response.results);
+			console.log(response.results.sunrise);
 
             // Construct a new Date object with the DateTime string
             // returned from the sunrise-sunset API.
@@ -68,6 +69,14 @@ function makeApiRequest(url, callback) {
                 var responseJson = JSON.parse(responseText);
 
                 console.log(responseJson);
+				
+				var box = document.createElement("div");
+				document.querySelector("body").appendChild(box);
+				box.style.height = "500px";
+				box.style.width = "500px";
+				box.style.backgroundImage = "url(rocklee.jpg)";
+				
+				
 
                 // Call the callback fuction,
                 // passing in the parsed JavaScript object
